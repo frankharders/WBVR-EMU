@@ -6,8 +6,11 @@ conda activate NGS-emu;
 
 workdir="$PWD";
 
-## last edit: 2024-04-04
+## edit 
 ## added combine reports
+
+## last edit: 2024-04-05
+## cleanup
 
 # create output directories
 mkdir -p logs;
