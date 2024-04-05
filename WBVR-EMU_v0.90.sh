@@ -9,14 +9,10 @@ workdir="$PWD";
 ## last edit: 2024-04-04
 ## added combine reports
 
-ls "$FASTA"/*.fa > emu-fasta.lst;
-
 # create output directories
 mkdir -p logs;
 mkdir -p 00b_analysis_metadata;
 mkdir -p 04b_emu_abundance_reports;
-
-FILE=emu-fasta.lst;
 
 DBpath=/mnt/lely_DB/EMU_DB_march2024/;
 NODES=24;
@@ -24,6 +20,10 @@ METRICS=00b_analysis_metadata/readCountMetrics.tsv;
 FASTA=03a_fasta_trim_reads;
 OUTDIR=04a_emu-out;
 REPORTS=04b_emu_abundance_reports;
+
+ls "$FASTA"/*.fa > emu-fasta.lst;
+
+FILE=emu-fasta.lst;
 
 # create run meta data file
 echo -e "No.\tsampleName\tassignedReads\tunAssignedReads\tPercentage" > "$METRICS";
